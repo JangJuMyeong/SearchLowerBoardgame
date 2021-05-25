@@ -17,8 +17,6 @@
 		B760732D265D00AF0053ABCF /* RankCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B760732B265D00AF0053ABCF /* RankCollectionViewCell.xib */; };
 		B7607331265D00D90053ABCF /* RecommendCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B760732F265D00D90053ABCF /* RecommendCollectionViewCell.swift */; };
 		B7607332265D00D90053ABCF /* RecommendCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7607330265D00D90053ABCF /* RecommendCollectionViewCell.xib */; };
-		B7607335265D00EF0053ABCF /* TagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7607333265D00EF0053ABCF /* TagCollectionViewCell.swift */; };
-		B7607336265D00EF0053ABCF /* TagCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7607334265D00EF0053ABCF /* TagCollectionViewCell.xib */; };
 		B7607338265D026F0053ABCF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B7607337265D026E0053ABCF /* GoogleService-Info.plist */; };
 		F8A8FF336B19AD959BAA4496 /* Pods_SearchLowerBoardgame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD9B8B4AB7E5B6B311E93311 /* Pods_SearchLowerBoardgame.framework */; };
 /* End PBXBuildFile section */
@@ -37,8 +35,6 @@
 		B760732B265D00AF0053ABCF /* RankCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RankCollectionViewCell.xib; sourceTree = "<group>"; };
 		B760732F265D00D90053ABCF /* RecommendCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendCollectionViewCell.swift; sourceTree = "<group>"; };
 		B7607330265D00D90053ABCF /* RecommendCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendCollectionViewCell.xib; sourceTree = "<group>"; };
-		B7607333265D00EF0053ABCF /* TagCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCollectionViewCell.swift; sourceTree = "<group>"; };
-		B7607334265D00EF0053ABCF /* TagCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TagCollectionViewCell.xib; sourceTree = "<group>"; };
 		B7607337265D026E0053ABCF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F3884D6A772339557C60C4EC /* Pods-SearchLowerBoardgame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SearchLowerBoardgame.debug.xcconfig"; path = "Target Support Files/Pods-SearchLowerBoardgame/Pods-SearchLowerBoardgame.debug.xcconfig"; sourceTree = "<group>"; };
 		FD9B8B4AB7E5B6B311E93311 /* Pods_SearchLowerBoardgame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SearchLowerBoardgame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,8 +101,6 @@
 				B760732B265D00AF0053ABCF /* RankCollectionViewCell.xib */,
 				B760732F265D00D90053ABCF /* RecommendCollectionViewCell.swift */,
 				B7607330265D00D90053ABCF /* RecommendCollectionViewCell.xib */,
-				B7607333265D00EF0053ABCF /* TagCollectionViewCell.swift */,
-				B7607334265D00EF0053ABCF /* TagCollectionViewCell.xib */,
 			);
 			path = CollectionViewCell;
 			sourceTree = "<group>";
@@ -182,7 +176,6 @@
 				B7607323265CF2940053ABCF /* LaunchScreen.storyboard in Resources */,
 				B7607320265CF2940053ABCF /* Assets.xcassets in Resources */,
 				B760732D265D00AF0053ABCF /* RankCollectionViewCell.xib in Resources */,
-				B7607336265D00EF0053ABCF /* TagCollectionViewCell.xib in Resources */,
 				B7607332265D00D90053ABCF /* RecommendCollectionViewCell.xib in Resources */,
 				B760731E265CF2940053ABCF /* Main.storyboard in Resources */,
 				B7607338265D026F0053ABCF /* GoogleService-Info.plist in Resources */,
@@ -241,7 +234,6 @@
 				B760731B265CF2940053ABCF /* ViewController.swift in Sources */,
 				B7607331265D00D90053ABCF /* RecommendCollectionViewCell.swift in Sources */,
 				B7607317265CF2940053ABCF /* AppDelegate.swift in Sources */,
-				B7607335265D00EF0053ABCF /* TagCollectionViewCell.swift in Sources */,
 				B760732C265D00AF0053ABCF /* RankCollectionViewCell.swift in Sources */,
 				B7607319265CF2940053ABCF /* SceneDelegate.swift in Sources */,
 			);

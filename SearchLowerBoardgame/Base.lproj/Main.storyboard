@@ -1,24 +1,164 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HJv-lG-bYS">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--최저가 보드게임-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SearchLowerBoardgame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="02M-Vy-YB2">
+                                <rect key="frame" x="0.0" y="140" width="414" height="51"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bUg-66-STC">
+                                <rect key="frame" x="0.0" y="191" width="414" height="622"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dg7-hB-L5r">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="622"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Jd-0y-nXw" customClass="TagListView" customModule="TagListView">
+                                                <rect key="frame" x="25" y="8" width="364" height="150"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="150" id="Sf0-si-K23"/>
+                                                </constraints>
+                                            </view>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mn0-fU-Tuc">
+                                                <rect key="frame" x="10" y="197" width="394" height="150"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="150" id="gye-of-BA7"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="2Jd-0y-nXw" secondAttribute="trailing" constant="25" id="08L-NV-IWQ"/>
+                                            <constraint firstItem="mn0-fU-Tuc" firstAttribute="leading" secondItem="Dg7-hB-L5r" secondAttribute="leading" constant="10" id="8J1-3a-nAV"/>
+                                            <constraint firstAttribute="trailing" secondItem="mn0-fU-Tuc" secondAttribute="trailing" constant="10" id="8Wj-zs-bTG"/>
+                                            <constraint firstItem="mn0-fU-Tuc" firstAttribute="top" secondItem="2Jd-0y-nXw" secondAttribute="bottom" constant="39" id="AgS-gO-mZ6"/>
+                                            <constraint firstItem="2Jd-0y-nXw" firstAttribute="leading" secondItem="Dg7-hB-L5r" secondAttribute="leading" constant="25" id="O4z-P3-cnz"/>
+                                            <constraint firstItem="2Jd-0y-nXw" firstAttribute="centerX" secondItem="Dg7-hB-L5r" secondAttribute="centerX" id="QEv-zd-rFc"/>
+                                            <constraint firstItem="2Jd-0y-nXw" firstAttribute="top" secondItem="Dg7-hB-L5r" secondAttribute="top" constant="8" id="a9q-uL-1b2"/>
+                                            <constraint firstItem="mn0-fU-Tuc" firstAttribute="centerX" secondItem="Dg7-hB-L5r" secondAttribute="centerX" id="e83-BD-79j"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Dg7-hB-L5r" secondAttribute="bottom" id="Q3l-cN-YMj"/>
+                                    <constraint firstItem="Dg7-hB-L5r" firstAttribute="top" secondItem="bUg-66-STC" secondAttribute="top" id="ZIg-2K-w6c"/>
+                                    <constraint firstAttribute="trailing" secondItem="Dg7-hB-L5r" secondAttribute="trailing" id="e0U-Sv-nKW"/>
+                                    <constraint firstItem="Dg7-hB-L5r" firstAttribute="leading" secondItem="bUg-66-STC" secondAttribute="leading" id="pQd-rI-vl4"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bUg-66-STC" firstAttribute="top" secondItem="02M-Vy-YB2" secondAttribute="bottom" id="1jO-up-RWE"/>
+                            <constraint firstItem="bUg-66-STC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7ME-hW-6Vy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bUg-66-STC" secondAttribute="bottom" id="Ke3-ta-SeJ"/>
+                            <constraint firstItem="02M-Vy-YB2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="L9d-IJ-eZV"/>
+                            <constraint firstItem="02M-Vy-YB2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Yce-CR-72e"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bUg-66-STC" secondAttribute="trailing" id="fTJ-Rm-onT"/>
+                            <constraint firstItem="Dg7-hB-L5r" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="gTs-g3-RCg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="02M-Vy-YB2" secondAttribute="trailing" id="kdC-hA-IKJ"/>
+                            <constraint firstItem="Dg7-hB-L5r" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.694196" priority="250" id="wGw-1l-D4z"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="최저가 보드게임" id="awQ-El-7Hw"/>
+                    <size key="freeformSize" width="414" height="896"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1042.0289855072465" y="115.84821428571428"/>
+        </scene>
+        <!--로그인-->
+        <scene sceneID="5se-xp-IAw">
+            <objects>
+                <viewController id="uMn-pr-3g1" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ydY-Fg-zYd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="pn8-yh-6hJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="로그인" image="person.fill" catalog="system" id="mjC-oa-f6G"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RYw-Cr-WCY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="814"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="LQ7-4P-XUA">
+            <objects>
+                <tabBarController id="HJv-lG-bYS" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="NnB-V1-NQm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="4DW-3C-8vZ" kind="relationship" relationship="viewControllers" id="8ML-3J-kek"/>
+                        <segue destination="BPt-xF-I1P" kind="relationship" relationship="viewControllers" id="b99-10-nhV"/>
+                        <segue destination="uMn-pr-3g1" kind="relationship" relationship="viewControllers" id="fiI-Vx-pnY"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bf8-fo-ZLA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-838" y="116"/>
+        </scene>
+        <!--카테고리-->
+        <scene sceneID="4Qe-xx-xx5">
+            <objects>
+                <viewController id="BPt-xF-I1P" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yNY-9o-wK8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Eso-Jk-Cbc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="카테고리" image="list.dash" catalog="system" id="itq-8u-7YQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hpR-Fu-kcj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="-569"/>
+        </scene>
+        <!--홈-->
+        <scene sceneID="NTx-vP-2dC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4DW-3C-8vZ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="홈" image="house.fill" catalog="system" id="ZCx-J3-DEB"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="rPt-dW-HND">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="cy7-KH-n9F"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VIM-bX-0kt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="115.84821428571428"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="house.fill" catalog="system" width="128" height="106"/>
+        <image name="list.dash" catalog="system" width="128" height="85"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
